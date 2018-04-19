@@ -1,5 +1,5 @@
 """
-Test the relative speed of iteration tool alternatives.
+Генерация листов различными способами
 По мотивам Lutz, Mark. Learning Python: Powerful Object-Oriented Programming. " O'Reilly Media, Inc.", 2013.
 """
 
