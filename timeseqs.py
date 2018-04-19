@@ -1,10 +1,9 @@
-"Test the relative speed of iteration tool alternatives."
+"""
+Test the relative speed of iteration tool alternatives.
+По мотивам Lutz, Mark. Learning Python: Powerful Object-Oriented Programming. " O'Reilly Media, Inc.", 2013.
+"""
 
-import sys, timer
-
-
-reps = 10000
-reps_list = list(range(reps))
+import timer
 
 
 def for_loop():
@@ -33,8 +32,10 @@ def gen_func():
     return list(gen())
 
 
-print(sys.version)
-for test in (for_loop, list_comprehension, map_call, gen_expr, gen_func):
-    (best_of, (total, result)) = timer.best_of_total(5, 1000, test)
-    print('%-9s: %.5f => [%s...%s]' % (test.__name__, best_of, result[0], result[-1]))
-    
+if __name__ == '__main__':
+    reps = 10000
+    reps_list = list(range(reps))
+
+    for test_func in (for_loop, list_comprehension, map_call, gen_expr, gen_func):
+        best_of = timer.best_of_total(5, 1000, test_func)
+        print('%-9s: %.5f' % (test_func.__name__, best_of))
