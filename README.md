@@ -6,7 +6,7 @@
 - gen_func
 
 **Результаты тестирования на локальной машине**:   
-https://trthhrtz.github.io/ListGenBench/
+https://trthhrtz.github.io/russian/2018/04/19/ListGenBench.html
 
 **Запуск**:  
 `$ python timeseqs.py`  
